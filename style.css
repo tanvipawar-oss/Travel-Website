@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Edu SA Beginner", cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+
+:root {
+    --h1-font: 5rem;
+    --h5-font: 20px;
+    --p-font: 1rem;
+}
+
+/* body{
+    background-color: black;
+    color: whitesmoke;
+    
+} */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+    background: transparent;
+    padding: 27px 11%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+}
+
+.logo {
+    font-size: 33px;
+    font-weight: 700;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: aqua;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav a {
+    color: whitesmoke;
+    font-size: var(--p-font);
+    font-weight: 500;
+    margin: 15px 22px;
+    transition: all .50s ease;
+
+}
+
+.nav a:focus,
+.nav a:active {
+    text-decoration: underline;
+    color: yellow;
+}
+
+.Social-icons a {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 22px;
+    color: whitesmoke;
+    margin-right: 18px;
+    margin-left: 5px;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.Social-icons a:hover {
+    color: yellow;
+    transform: translateY(-5px);
+}
+
+section {
+    padding: 70px 11% 60px;
+
+}
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image:
+        linear-gradient(to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.4)),
+        url("./Assets/1660894165_jaisalmer_821631bb23140209ea99c8f810f75634.png");
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.home-text h5 {
+    font-size: var(--h5-font);
+    font-weight: 600;
+    color: yellow;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.home-text h1 {
+    font-size: var(--h1-font);
+    font-weight: 800;
+    color: whitesmoke;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.home-text p {
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.67);
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+.home {
+    position: relative;
+}
+
+.home-images {
+    position: absolute;
+    bottom: 30px;
+    left: 11%;
+    display: flex;
+    gap: 20px;
+}
+
+.home-images img {
+    width: 140px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.home-images img:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.destination {
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
+        url("./Assets/d0.png");
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+}
+
+
+.destination h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    color: yellow;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.destination p {
+    text-align: center;
+    font-size: var(--p-font);
+    color: whitesmoke;
+    margin-top: 0;
+    line-height: 1.5;
+    margin-bottom: 10px;
+
+}
+
+.dest-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.dest-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.dest-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.dest-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 5px;
+    color: white;
+}
+
+.dest-card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.dest-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+}
+
+.packages {
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
+        url("./Assets/p0.png");
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+}
+
+.packages h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    color: yellow;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.packages p {
+    text-align: center;
+    font-size: var(--p-font);
+    color: whitesmoke;
+    margin-top: 0;
+    line-height: 1.5;
+    margin-bottom: 10px;
+
+}
+
+.packages-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.pack-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.pack-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.pack-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 5px;
+    color: white;
+}
+
+.pack-card ul {
+    list-style: none;
+    padding: 0 15px 20px;
+}
+
+.pack-card ul li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.pack-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+}
+
+.gallary {
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
+        url("./Assets/i0.jpg");
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+}
+
+.gallary h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    color: yellow;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.gallary p {
+    text-align: center;
+    font-size: var(--p-font);
+    color: whitesmoke;
+    margin-top: 0;
+    line-height: 1.5;
+    margin-bottom: 10px;
+
+}
+
+.gallary-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+.gall-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.gall-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+
+
+}
+
+.gall-card:hover img {
+    transform: scale(1.25);
+
+
+}
+
+.contact {
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
+        url("./Assets/contact.png");
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+    overflow: visible;
+}
+
+.contact h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    color: yellow;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact p {
+    text-align: center;
+    font-size: var(--p-font);
+    color: whitesmoke;
+    margin-top: 0;
+    line-height: 1.5;
+    margin-bottom: 10px;
+
+}
+
+.Social {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+
+}
+
+.location {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    color: white;
+    transition: 0.4s;
+
+}
+
+.location i {
+    font-size: 40px;
+    color: gold;
+    margin-bottom: 15px;
+}
+
+.location:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+}
+
+.phone {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    color: white;
+    transition: 0.4s;
+
+}
+
+.phone i {
+    font-size: 40px;
+    color: gold;
+    margin-bottom: 15px;
+
+}
+
+.phone:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+}
+
+.whatsapp {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    color: white;
+    transition: 0.4s;
+
+}
+
+.whatsapp i {
+    font-size: 40px;
+    color: gold;
+    margin-bottom: 15px;
+}
+
+.whatsapp:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+}
+
+.message {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    color: white;
+    transition: 0.4s;
+
+}
+
+.message i {
+    font-size: 40px;
+    color: gold;
+    margin-bottom: 15px;
+}
+
+.message:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+}
+
+.map {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 15px;
+    display: block;
+}
+
+.login {
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
+        url("./Assets/log.jpg");
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+    overflow: visible;
+}
+
+.login h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    color: yellow;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.login p {
+    text-align: center;
+    font-size: var(--p-font);
+    color: whitesmoke;
+    margin-top: 0;
+    line-height: 1.5;
+    margin-bottom: 10px;
+
+}
+
+.login fieldset {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid gold;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.login legend {
+    padding: 0 10px;
+    color: gold;
+    font-size: 1.5rem;
+    text-align: center;
+
+
+}
+
+
+.login label {
+
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+
+
+.login input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+
+    margin-bottom: 15px;
+}
+
+.login button {
+    width: 100%;
+    padding: 12px;
+    background: gold;
+    color: black;
+    border: none;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.login button:hover {
+    background: orange;
+}
